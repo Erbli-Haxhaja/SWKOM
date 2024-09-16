@@ -3,6 +3,8 @@ package com.groupn.demo.controllers;
 import com.groupn.demo.entities.Book;
 import com.groupn.demo.exceptions.BookNotFoundException;
 import com.groupn.demo.repositories.BookRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,8 +17,16 @@ public class BookController {
     }
     @CrossOrigin
     @GetMapping("/")
-    public String hello() {
-        return "<h1>Hi there, this is the book store!</h1>";
+    public ResponseEntity<String> hello() {
+        String data = "<h1>Hi there, this is the book store!</h1>"
+                + "<h2>Our Books:</h2>"
+                + "<ul>"
+                + "<li>Book 1: The Great Gatsby</li>"
+                + "<li>Book 2: To Kill a Mockingbird</li>"
+                + "<li>Book 3: 1984</li>"
+                + "</ul>";
+
+        return new ResponseEntity<>(data, HttpStatus.OK);
     }
 
     @CrossOrigin
