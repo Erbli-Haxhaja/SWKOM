@@ -14,15 +14,12 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin_container
+  adminer:
+    image: adminer
+    container_name: adminer
     restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "eeba.haxhaja@gmail.com"
-      PGADMIN_DEFAULT_PASSWORD: "eeeeeeee"
     ports:
-      - "8080:80"
+      - "9091:8080"
     depends_on:
       - postgres
 
