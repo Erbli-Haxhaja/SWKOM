@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e4cfe05c-2b2c-43d8-b90d-fef7aaa5e897" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/SwkomApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/SwkomApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/BookController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book$BookBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundAdvice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/repositories/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/repositories/BookRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +96,8 @@
       <updated>1726439098265</updated>
       <workItem from="1726439099269" duration="6074000" />
       <workItem from="1726522071631" duration="599000" />
+      <workItem from="1727017250532" duration="92000" />
+      <workItem from="1727017464082" duration="1557000" />
     </task>
     <servers />
   </component>
