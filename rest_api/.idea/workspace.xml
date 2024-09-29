@@ -5,17 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4cfe05c-2b2c-43d8-b90d-fef7aaa5e897" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/repositories/DocumentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/web/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../deploy_app_linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deploy_app_linux.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/controllers/DocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/entities/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/exceptions/BookNotFoundAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/exceptions/BookNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/repositories/BookRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/SwkomApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/SwkomApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book$BookBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book$BookBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundAdvice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/repositories/BookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/repositories/BookRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/BookController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book$BookBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/entities/Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/exceptions/BookNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/repositories/BookRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rest-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rest-api.jar.original" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +72,7 @@
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.SwkomApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -97,7 +112,12 @@
       <workItem from="1726439099269" duration="6074000" />
       <workItem from="1726522071631" duration="599000" />
       <workItem from="1727017250532" duration="92000" />
-      <workItem from="1727017464082" duration="1557000" />
+      <workItem from="1727017464082" duration="2364000" />
+      <workItem from="1727091718506" duration="1277000" />
+      <workItem from="1727122889652" duration="3000" />
+      <workItem from="1727177445534" duration="968000" />
+      <workItem from="1727267602042" duration="4354000" />
+      <workItem from="1727642697174" duration="4794000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store - Add Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .success-message {
+            color: green;
+            margin-top: 20px;
+        }
+        .error-message {
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">Book Store</div>
+        <div class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="all.html">All</a>
+            <a href="add.html">Add</a>
+            <a href="delete.html">Delete</a>
+            <a href="search.html">Search</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Add a document of your own</h2>
+        <form id="documentForm">
+            <label for="document-name">Document Name:</label><br>
+            <input type="text" id="document-name" name="document-name" required><br><br>
+
+            <label for="document-description">Document Description:</label><br>
+            <textarea id="document-description" name="document-description" required></textarea><br><br>
+
+            <label for="document-pages">Number of Pages:</label><br>
+            <input type="number" id="document-pages" name="document-pages" required><br><br>
+
+            <label for="document-upload">Upload Document (PDF):</label><br>
+            <input type="file" id="document-upload" name="document-upload" accept=".pdf" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response-message"></div>
+    </div>
+
+    <script>
+        document.getElementById('documentForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = document.getElementById('documentForm');
+            const formData = new FormData(form);
+
+            // Create the JSON object to be sent
+            let jsonFormData = {
+                name: formData.get('document-name'),
+                description: formData.get('document-description'),
+                pages: formData.get('document-pages'),
+                file: formData.get('document-upload')
+            };
+
+            // Create the FormData object to send with the request
+            const data = new FormData();
+            data.append('name', jsonFormData.name);
+            data.append('description', jsonFormData.description);
+            data.append('pages', jsonFormData.pages);
+            data.append('file', formData.get('document-upload'));
+
+            try {
+                const response = await fetch('http://localhost:8081/api/documents/save', {
+                    method: 'POST',
+                    body: data,
+                });
+
+                const responseMessage = document.getElementById('response-message');
+
+                if (response.ok) {
+                    responseMessage.innerHTML = 'Success! Document added successfully.';
+                    responseMessage.className = 'success-message';
+                    form.reset(); // Reset the form
+                } else {
+                    const errorData = await response.json();
+                    responseMessage.innerHTML = `Fail! Error: ${errorData.message || 'An error occurred'}`;
+                    responseMessage.className = 'error-message';
+                }
+            } catch (error) {
+                const responseMessage = document.getElementById('response-message');
+                responseMessage.innerHTML = `Fail! Error: ${error.message}`;
+                responseMessage.className = 'error-message';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
-com\groupn\demo\entities\Book.class
-com\groupn\demo\exceptions\BookNotFoundAdvice.class
-com\groupn\demo\SwkomApplication.class
-com\groupn\demo\controllers\BookController.class
-com\groupn\demo\entities\Book$BookBuilder.class
-com\groupn\demo\exceptions\BookNotFoundException.class
-com\groupn\demo\repositories\BookRepository.class
+com/groupn/demo/repositories/DocumentRepository.class
+com/groupn/demo/web/WebConfig.class
+com/groupn/demo/controllers/DocumentController.class
+com/groupn/demo/entities/Document$DocumentBuilder.class
+com/groupn/demo/SwkomApplication.class
+com/groupn/demo/entities/Document.class
+com/groupn/demo/web/WebConfig$1.class

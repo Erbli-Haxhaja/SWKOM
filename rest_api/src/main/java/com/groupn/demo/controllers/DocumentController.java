@@ -1,62 +1,108 @@
 package com.groupn.demo.controllers;
 
 import com.groupn.demo.entities.Document;
-import com.groupn.demo.exceptions.BookNotFoundException;
-import com.groupn.demo.repositories.BookRepository;
+import com.groupn.demo.repositories.DocumentRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.util.List;
-import java.util.Optional;
+import java.io.IOException;
+import java.util.*;
+import java.util.stream.Collectors;
+
 @RestController
-public class BookController {
-    private final BookRepository repository;
-    public BookController(BookRepository repository) {
+@RequestMapping("/api/documents")
+public class DocumentController {
+
+    private final DocumentRepository repository;
+
+    public DocumentController(DocumentRepository repository) {
         this.repository = repository;
     }
-    @CrossOrigin
-    @GetMapping("/")
-    public ResponseEntity<String> hello() {
-        String data = "<h1>Hi there, this is the book store!</h1>"
-                + "<h2>Our Books:</h2>"
-                + "<ul>"
-                + "<li>Book 1: The Great Gatsby</li>"
-                + "<li>Book 2: To Kill a Mockingbird</li>"
-                + "<li>Book 3: 1984</li>"
-                + "</ul>";
-
-        return new ResponseEntity<>(data, HttpStatus.OK);
-    }
 
     @CrossOrigin
-    @PostMapping("/createBooks")
-    public Document createBook(@RequestBody Document document) {
-        return repository.save(document);
-    }
+    @PostMapping("/save")
+    public ResponseEntity<Document> saveDocument(
+            @RequestParam("name") String name,
+            @RequestParam("description") String description,
+            @RequestParam("pages") int pages,
+            @RequestParam("file") MultipartFile file) {
+        try {
+            // Check file size to debug if the file is being uploaded correctly
+            System.out.println("Uploaded file size: " + file.getSize());
 
-    @CrossOrigin
-    @GetMapping("/books")
-    public List<Document> getBooks() {
-        return repository.findAll();
-    }
+            Document document = Document.builder()
+                    .name(name)
+                    .description(description)
+                    .pages(pages)
+                    .pdfDocument(file.getBytes())
+                    .build();
 
-    @CrossOrigin
-    @GetMapping("/books/{id}")
-    public Optional<Document> getBook(@PathVariable Long id) {
-        var book = repository.findById(id);
-        if ( book==null ) {
-            throw new BookNotFoundException(id);
-        }
-        else {
-            return book;
+            Document savedDocument = repository.save(document);
+            return new ResponseEntity<>(savedDocument, HttpStatus.CREATED);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
     @CrossOrigin
-    @PutMapping("/books/{id}")
-    public Document updateBook(@RequestBody Document document, @PathVariable Long id) {
-        document.setId(id);
-        return repository.save(document);
+    @GetMapping("/getAll")
+    public ResponseEntity<List<Map<String, Object>>> getDocuments() {
+        List<Map<String, Object>> documents = repository.findAll().stream()
+                .map(document -> {
+                    Map<String, Object> docMap = new HashMap<>();
+                    docMap.put("id", document.getId());
+                    docMap.put("name", document.getName());
+                    docMap.put("description", document.getDescription());
+                    docMap.put("pages", document.getPages());
+                    // Encode the pdfDocument as Base64
+                    docMap.put("pdfDocument", Base64.getEncoder().encodeToString(document.getPdfDocument()));
+                    return docMap;
+                })
+                .collect(Collectors.toList());
+
+        return new ResponseEntity<>(documents, HttpStatus.OK);
     }
 
+    @CrossOrigin
+    @GetMapping("/{id}")
+    public ResponseEntity<Document> getDocumentById(@PathVariable Long id) {
+        Optional<Document> document = repository.findById(id);
+        return document.map(ResponseEntity::ok)
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+
+    @CrossOrigin
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Document> updateDocument(
+            @RequestBody Document document,
+            @PathVariable Long id) {
+        Optional<Document> documentData = repository.findById(id);
+
+        if (documentData.isPresent()) {
+            Document existingDocument = documentData.get();
+            existingDocument.setName(document.getName());
+            existingDocument.setDescription(document.getDescription());
+            existingDocument.setPages(document.getPages());
+            existingDocument.setPdfDocument(document.getPdfDocument());
+            Document updatedDocument = repository.save(existingDocument);
+            return new ResponseEntity<>(updatedDocument, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @CrossOrigin
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<HttpStatus> deleteDocument(@PathVariable Long id) {
+        try {
+            repository.deleteById(id);
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

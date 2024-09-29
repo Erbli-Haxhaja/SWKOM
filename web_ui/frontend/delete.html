@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Store - Delete Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">Document Store</div>
+        <div class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="all.html">All</a>
+            <a href="add.html">Add</a>
+            <a href="delete.html">Delete</a>
+            <a href="search.html">Search</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Delete a Document you don't like</h2>
+        <form id="delete-form">
+            <label for="document-id">ID of the document to delete:</label><br>
+            <input type="text" id="document-id" name="document-id" required><br><br>
+            <button type="submit">Delete</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // Handle the form submission
+        document.getElementById('delete-form').addEventListener('submit', async function(event) {
+            event.preventDefault();  // Prevent the form from refreshing the page
+            
+            const documentId = document.getElementById('document-id').value;
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = '';  // Clear previous messages
+            
+            try {
+                // Send a DELETE request to the backend
+                const response = await fetch(`http://localhost:8081/api/documents/delete/${documentId}`, {
+                    method: 'DELETE'
+                });
+                
+                // Check if the deletion was successfull
+                if (response.ok) {
+                    messageElement.textContent = `Document with ID ${documentId} was successfully deleted.`;
+                } else if (response.status === 404) {
+                    messageElement.textContent = `Document with ID ${documentId} not found.`;
+                } else {
+                    messageElement.textContent = `Failed to delete document. Please try again.`;
+                }
+            } catch (error) {
+                console.error('Error deleting document:', error);
+                messageElement.textContent = 'An error occurred while trying to delete the document.';
+            }
+        });
+    </script>
+</body>
+</html>
