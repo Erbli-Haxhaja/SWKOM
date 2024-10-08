@@ -1,5 +1,6 @@
 /mnt/c/Users/Erbli Haxhaja/Desktop/Technikum/5. Semester/SWKOM/SWKOM/rest_api/src/main/java/com/groupn/demo/SwkomApplication.java
 /mnt/c/Users/Erbli Haxhaja/Desktop/Technikum/5. Semester/SWKOM/SWKOM/rest_api/src/main/java/com/groupn/demo/controllers/DocumentController.java
+/mnt/c/Users/Erbli Haxhaja/Desktop/Technikum/5. Semester/SWKOM/SWKOM/rest_api/src/main/java/com/groupn/demo/dto/DocumentDTO.java
 /mnt/c/Users/Erbli Haxhaja/Desktop/Technikum/5. Semester/SWKOM/SWKOM/rest_api/src/main/java/com/groupn/demo/entities/Document.java
 /mnt/c/Users/Erbli Haxhaja/Desktop/Technikum/5. Semester/SWKOM/SWKOM/rest_api/src/main/java/com/groupn/demo/repositories/DocumentRepository.java
 /mnt/c/Users/Erbli Haxhaja/Desktop/Technikum/5. Semester/SWKOM/SWKOM/rest_api/src/main/java/com/groupn/demo/web/WebConfig.java

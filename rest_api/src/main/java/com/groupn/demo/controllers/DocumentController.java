@@ -1,5 +1,6 @@
 package com.groupn.demo.controllers;
 
+import com.groupn.demo.dto.DocumentDTO;
 import com.groupn.demo.entities.Document;
 import com.groupn.demo.repositories.DocumentRepository;
 import org.springframework.http.HttpStatus;
@@ -23,20 +24,14 @@ public class DocumentController {
 
     @CrossOrigin
     @PostMapping("/save")
-    public ResponseEntity<Document> saveDocument(
-            @RequestParam("name") String name,
-            @RequestParam("description") String description,
-            @RequestParam("pages") int pages,
-            @RequestParam("file") MultipartFile file) {
+    public ResponseEntity<Document> saveDocument(@ModelAttribute DocumentDTO documentDTO) {
         try {
-            // Check file size to debug if the file is being uploaded correctly
-            System.out.println("Uploaded file size: " + file.getSize());
-
+            // Convert DTO to Document entity
             Document document = Document.builder()
-                    .name(name)
-                    .description(description)
-                    .pages(pages)
-                    .pdfDocument(file.getBytes())
+                    .name(documentDTO.getName())
+                    .description(documentDTO.getDescription())
+                    .pages(documentDTO.getPages())
+                    .pdfDocument(documentDTO.getFile().getBytes())
                     .build();
 
             Document savedDocument = repository.save(document);

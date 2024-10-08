@@ -1,3 +1,4 @@
+com/groupn/demo/dto/DocumentDTO.class
 com/groupn/demo/repositories/DocumentRepository.class
 com/groupn/demo/web/WebConfig.class
 com/groupn/demo/controllers/DocumentController.class
