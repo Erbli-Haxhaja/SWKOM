@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4cfe05c-2b2c-43d8-b90d-fef7aaa5e897" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/dto/DocumentDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/controllers/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/controllers/DocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rest-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/rest-api.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rest-api.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/rest-api.jar.original" afterDir="false" />
     </list>
@@ -100,6 +103,7 @@
       <workItem from="1727642697174" duration="6212000" />
       <workItem from="1727783044668" duration="1818000" />
       <workItem from="1728391753037" duration="1253000" />
+      <workItem from="1729263721249" duration="1920000" />
     </task>
     <servers />
   </component>
