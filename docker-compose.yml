@@ -67,16 +67,16 @@ services:
       - ./minio/data:/data
     restart: always
   
-  # paperlessservice:
-  #   build:
-  #     context: ./ocr_worker 
-  #     dockerfile: Dockerfile
-  #   container_name: paperlessservice
-  #   depends_on:
-  #     - rabbitmq
-  #     - minio
-  #   ports:
-  #     - "8082:8082"
+  paperlessservice:
+    build:
+      context: ./ocr_worker 
+      dockerfile: Dockerfile
+    container_name: paperlessservice
+    depends_on:
+      - rabbitmq
+      - minio
+    ports:
+      - "8082:8082"
 
 volumes:
   postgres_data:

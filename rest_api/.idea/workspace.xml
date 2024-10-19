@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4cfe05c-2b2c-43d8-b90d-fef7aaa5e897" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../deploy_app_linux.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deploy_app_linux.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.bloomcycle.bin/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.bloomcycle.bin/xl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage-cache.bin.bkp/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage-cache.bin.bkp/xl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage-cache.bin/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage-cache.bin/xl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage.json/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage.json/xl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin.bkp/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin.bkp/xl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin/xl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/documents/Brainstorming Results.pdf/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/documents/Brainstorming Results.pdf/xl.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/controllers/DocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/controllers/DocumentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/rabbitmq/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/rabbitmq/RabbitMQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/DocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/DocumentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/rabbitmq/RabbitMQConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/rabbitmq/RabbitMQConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/rabbitmq/RabbitMQSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/rabbitmq/RabbitMQSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rest-api.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/rest-api.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rest-api.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/rest-api.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +105,7 @@
       <workItem from="1727783044668" duration="1818000" />
       <workItem from="1728391753037" duration="1253000" />
       <workItem from="1729263721249" duration="1920000" />
-      <workItem from="1729354849700" duration="5034000" />
+      <workItem from="1729354849700" duration="6712000" />
     </task>
     <servers />
   </component>
