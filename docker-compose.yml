@@ -53,5 +53,30 @@ services:
       RABBITMQ_DEFAULT_USER: admin
       RABBITMQ_DEFAULT_PASS: admin
 
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9090:9090" # Console
+    environment:
+      MINIO_ROOT_USER: "minioadmin"
+      MINIO_ROOT_PASSWORD: "minioadmin"
+    command: server /data --console-address ":9090"
+    volumes:
+      - ./minio/data:/data
+    restart: always
+  
+  # paperlessservice:
+  #   build:
+  #     context: ./ocr_worker 
+  #     dockerfile: Dockerfile
+  #   container_name: paperlessservice
+  #   depends_on:
+  #     - rabbitmq
+  #     - minio
+  #   ports:
+  #     - "8082:8082"
+
 volumes:
   postgres_data:

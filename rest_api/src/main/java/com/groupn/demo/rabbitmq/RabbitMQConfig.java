@@ -6,9 +6,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
 
-    public static final String QUEUE = "documentQueue";
-    public static final String EXCHANGE = "documentExchange";
-    public static final String ROUTING_KEY = "documentRoutingKey";
+    public static final String QUEUE = "OCR_QUEUE";
+    public static final String EXCHANGE = "DOCUMENT_EXCHANGE";
+    public static final String ROUTING_KEY = "DOCUMENT_ROUTING_KEY";
 
     @Bean
     public Queue queue() {

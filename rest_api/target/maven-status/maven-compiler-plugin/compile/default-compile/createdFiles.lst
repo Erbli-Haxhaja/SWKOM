@@ -1,10 +1,12 @@
 com/groupn/demo/dto/DocumentDTO.class
-com/groupn/demo/repositories/DocumentRepository.class
-com/groupn/demo/rabbitmq/RabbitMQConfig.class
 com/groupn/demo/rabbitmq/RabbitMQSender.class
 com/groupn/demo/web/WebConfig.class
+com/groupn/demo/service/DocumentService.class
+com/groupn/demo/entities/Document.class
+com/groupn/demo/web/WebConfig$1.class
+com/groupn/demo/repositories/DocumentRepository.class
+com/groupn/demo/rabbitmq/RabbitMQConfig.class
+com/groupn/demo/minio/MinioConfig.class
 com/groupn/demo/controllers/DocumentController.class
 com/groupn/demo/entities/Document$DocumentBuilder.class
 com/groupn/demo/SwkomApplication.class
-com/groupn/demo/entities/Document.class
-com/groupn/demo/web/WebConfig$1.class

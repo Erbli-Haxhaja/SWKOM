@@ -4,6 +4,7 @@ import com.groupn.demo.dto.DocumentDTO;
 import com.groupn.demo.entities.Document;
 import com.groupn.demo.rabbitmq.RabbitMQSender;
 import com.groupn.demo.repositories.DocumentRepository;
+import com.groupn.demo.service.DocumentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,10 +20,12 @@ public class DocumentController {
 
     private final DocumentRepository repository;
     private final RabbitMQSender rabbitMQSender;
+    private final DocumentService documentService;
 
-    public DocumentController(DocumentRepository repository, RabbitMQSender rabbitMQSender) {
+    public DocumentController(DocumentRepository repository, RabbitMQSender rabbitMQSender, DocumentService documentService) {
         this.repository = repository;
         this.rabbitMQSender = rabbitMQSender;
+        this.documentService = documentService;
     }
 
     @CrossOrigin
@@ -38,12 +41,17 @@ public class DocumentController {
                     .build();
 
             Document savedDocument = repository.save(document);
-            rabbitMQSender.sendMessage("Document saved: " + savedDocument.getName());
+            // Upload document to MinIO using the uploaded file from DTO
+            MultipartFile file = documentDTO.getFile();  // Get the file from DTO
+            documentService.uploadDocument(file);  // Upload the document to MinIO and trigger RabbitMQ OCR_QUEUE
+
             return new ResponseEntity<>(savedDocument, HttpStatus.CREATED);
 
         } catch (IOException e) {
             e.printStackTrace();
-            rabbitMQSender.sendMessage("Error saving document: " + documentDTO.getName());
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (Exception e) {
+            e.printStackTrace();
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

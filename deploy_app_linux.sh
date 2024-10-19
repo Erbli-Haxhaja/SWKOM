@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build the rest-api jar file
-if cd ./rest_api; then
+if cd ./ocr_worker; then
     if mvn clean package -DskipTests; then
         echo "Maven build successful."
     else
@@ -9,6 +9,6 @@ if cd ./rest_api; then
         exit 1
     fi
 else
-    echo "Directory ./rest_api not found!"
+    echo "Directory ./ocr_worker not found!"
     exit 1
 fi
