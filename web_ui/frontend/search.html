@@ -19,11 +19,83 @@
     </div>
     <div class="container">
         <h2>Search the document store</h2>
-        <form>
-            <label for="book-name">Name of the document:</label><br>
-            <input type="text" id="book-name" name="book-name" required><br><br>
+        <form id="searchForm">
+            <label for="query">Search by keyword:</label><br>
+            <input type="text" id="query" name="query" required><br><br>
             <button type="submit">Search</button>
         </form>
+
+        <div id="search-results" class="search-results"></div>
     </div>
+
+    <script> //Full-text Search
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const query = document.getElementById('query').value;
+
+            // Elasticsearch search API URL
+            const elasticsearchUrl = 'http://localhost:9200/documents/_search'; 
+
+            // Search payload (Elasticsearch Query DSL)
+            const payload = {
+                query: {
+                    match: {
+                        ocrText: query  // Searches the 'ocrText' field for the query
+                    }
+                }
+            };
+
+            fetch(elasticsearchUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                displayResults(data.hits.hits); // Display the search results
+            })
+            .catch(error => {
+                console.error('Error fetching search results:', error);
+            });
+        });
+
+        // Function to display the search results
+        function displayResults(results) {
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = ''; // Clear previous results
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+
+            results.forEach(hit => {
+                // Create result card
+                const card = document.createElement('div');
+                card.classList.add('result-card');
+
+                // Add document title
+                const title = document.createElement('h3');
+                title.textContent = `Document: ${hit._source.documentId}`;
+                card.appendChild(title);
+
+                // Add document content preview
+                const content = document.createElement('p');
+                content.innerHTML = `<span>Content:</span> ${hit._source.ocrText.substring(0, 150)}...`; // Show first 150 characters
+                card.appendChild(content);
+
+                // Add 'read more' link
+                const readMore = document.createElement('a');
+                readMore.href = `#`; // You can link to a detailed view if needed
+                readMore.textContent = 'Read more';
+                card.appendChild(readMore);
+
+                resultsContainer.appendChild(card);
+            });
+        }
+    </script>
 </body>
 </html>

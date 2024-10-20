@@ -85,6 +85,10 @@ services:
       - discovery.type=single-node
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
       - xpack.security.enabled=false
+      - http.cors.enabled=true
+      - http.cors.allow-origin="*"  # Quote the wildcard character
+      - http.cors.allow-methods=OPTIONS,HEAD,GET,POST
+      - http.cors.allow-headers=X-Requested-With,Content-Type,Content-Length
     ports:
       - "9200:9200"
       - "9300:9300"

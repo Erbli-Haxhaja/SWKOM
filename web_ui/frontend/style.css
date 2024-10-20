@@ -110,3 +110,43 @@ th {
     padding: 20px;
     border-radius: 10px;
 }
+
+/* Style the results section */
+.search-results {
+    margin-top: 20px;
+}
+
+.result-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.result-card p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.result-card p span {
+    font-weight: bold;
+}
+
+.result-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.result-card a:hover {
+    text-decoration: underline;
+}
