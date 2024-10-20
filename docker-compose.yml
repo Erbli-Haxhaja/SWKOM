@@ -78,5 +78,31 @@ services:
     ports:
       - "8082:8082"
 
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.10.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin  # Default admin password
+    ports:
+      - "3000:3000"  # Grafana UI port
+    volumes:
+      - grafana-data:/var/lib/grafana
 volumes:
   postgres_data:
+  es-data:
+    driver: local
+  grafana-data:
+    driver: local

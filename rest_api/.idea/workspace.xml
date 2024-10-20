@@ -12,7 +12,12 @@
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage.json/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage.json/xl.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin.bkp/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin.bkp/xl.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin/xl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/config/iam/sts/JSV92K6O7CX8HG1VJ43Z/identity.json/xl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/tmp/ec448b16-34d0-42db-95ee-39dc825ffb44" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/documents/Brainstorming Results.pdf/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/documents/Brainstorming Results.pdf/xl.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ocr_worker/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ocr_worker/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ocr_worker/src/main/java/com/paperlessservice/swkom/DocumentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ocr_worker/src/main/java/com/paperlessservice/swkom/DocumentProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ocr_worker/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ocr_worker/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +110,7 @@
       <workItem from="1727783044668" duration="1818000" />
       <workItem from="1728391753037" duration="1253000" />
       <workItem from="1729263721249" duration="1920000" />
-      <workItem from="1729354849700" duration="6712000" />
+      <workItem from="1729354849700" duration="6914000" />
     </task>
     <servers />
   </component>
