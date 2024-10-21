@@ -5,20 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4cfe05c-2b2c-43d8-b90d-fef7aaa5e897" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.bloomcycle.bin/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.bloomcycle.bin/xl.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage-cache.bin.bkp/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage-cache.bin.bkp/xl.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage-cache.bin/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage-cache.bin/xl.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage.json/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/.usage.json/xl.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin.bkp/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin.bkp/xl.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/.minio.sys/buckets/documents/.usage-cache.bin/xl.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/config/iam/sts/JSV92K6O7CX8HG1VJ43Z/identity.json/xl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../minio/data/.minio.sys/tmp/ec448b16-34d0-42db-95ee-39dc825ffb44" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../minio/data/documents/Brainstorming Results.pdf/xl.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../minio/data/documents/Brainstorming Results.pdf/xl.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ocr_worker/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ocr_worker/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ocr_worker/src/main/java/com/paperlessservice/swkom/DocumentProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ocr_worker/src/main/java/com/paperlessservice/swkom/DocumentProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ocr_worker/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ocr_worker/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/groupn/demo/SwkomApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/groupn/demo/SwkomApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/groupn/demo/SwkomApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/groupn/demo/SwkomApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/DocumentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/controllers/DocumentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/groupn/demo/service/DocumentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/groupn/demo/service/DocumentService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,28 +52,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.SwkomApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Erbli Haxhaja/Desktop/Technikum/5. Semester/SWKOM/SWKOM/ocr_worker&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.SwkomApplicationTests.executor": "Run",
+    "JUnit.SwkomApplicationTests.testHomePageIsUp.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.SwkomApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Erbli Haxhaja/Desktop/Technikum/5. Semester/SWKOM/SWKOM/ocr_worker",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="JUnit.SwkomApplicationTests">
+    <configuration name="SwkomApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.groupn.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.groupn.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.groupn.demo.SwkomApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwkomApplicationTests.testHomePageIsUp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.groupn.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.groupn.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.groupn.demo.SwkomApplicationTests" />
+      <option name="METHOD_NAME" value="testHomePageIsUp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SwkomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.groupn.demo.SwkomApplication" />
@@ -82,6 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SwkomApplicationTests" />
+        <item itemvalue="JUnit.SwkomApplicationTests.testHomePageIsUp" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -110,7 +148,7 @@
       <workItem from="1727783044668" duration="1818000" />
       <workItem from="1728391753037" duration="1253000" />
       <workItem from="1729263721249" duration="1920000" />
-      <workItem from="1729354849700" duration="6914000" />
+      <workItem from="1729354849700" duration="9239000" />
     </task>
     <servers />
   </component>
